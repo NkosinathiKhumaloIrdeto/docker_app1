@@ -6,7 +6,8 @@ services:
         build: . #build from local dockerfile
         ports:
             - "8045:8045"
-        links: mongodb_container 
+        links: 
+            - "mongodb_container"
     mongodb: #container 2
         container_name: mongodb_container
         image: mongo:latest
