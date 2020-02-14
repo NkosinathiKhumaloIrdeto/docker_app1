@@ -6,7 +6,9 @@ var usersModal = require('./mongo_modals/users');
 var bodyParser = require('body-parser');
 //"mongodb://localhost:27017/dockerdb" - local
 //'mongodb://mongodb_container:27017/dockerdb' - local
-var con_string = "mongodb://localhost:27017/dockerdb";
+var dev = "mongodb://localhost:27017/dockerdb";
+var live = "mongodb://mongodb_container:27017/dockerdb";
+var con_string = live;
 
 app.use(bodyParser.json());
 

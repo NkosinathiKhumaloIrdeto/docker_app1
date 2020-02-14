@@ -5,5 +5,3 @@ RUN npm i
 COPY . .
 EXPOSE 8045
 CMD ["npm","start"]
-
-
