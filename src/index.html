@@ -1,1 +1,27 @@
-Hi, im HTML
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $http.get("/get")
+                .then(function(response) {
+                    $scope.result = response.data;
+                });
+        });
+    </script>
+</head>
+
+<body ng-app="myApp">
+
+    Hi, im HTML
+
+    <div ng-controller="myCtrl" style="padding: 50px; border: 1px solid #ccc;">
+        {{result}}
+    </div>
+</body>
+
+</html>

@@ -5,7 +5,8 @@ let mongo = require('mongoose')
 var usersModal = require('./mongo_modals/users');
 var bodyParser = require('body-parser');
 //"mongodb://localhost:27017/dockerdb" - local
-var con_string = 'mongodb://mongodb_container:27017/dockerdb';
+//'mongodb://mongodb_container:27017/dockerdb' - local
+var con_string = "mongodb://localhost:27017/dockerdb";
 
 app.use(bodyParser.json());
 
